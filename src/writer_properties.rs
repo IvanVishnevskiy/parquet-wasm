@@ -111,6 +111,12 @@ impl WriterPropertiesBuilder {
         Self(self.0.set_max_row_group_row_count(Some(value)))
     }
 
+    /// Sets maximum size of a row group in bytes.
+    #[wasm_bindgen(js_name = setMaxRowGroupBytes)]
+    pub fn set_max_row_group_bytes(self, value: usize) -> Self {
+        Self(self.0.set_max_row_group_bytes(Some(value)))
+    }
+
     /// Sets "created by" property.
     #[wasm_bindgen(js_name = setCreatedBy)]
     pub fn set_created_by(self, value: String) -> Self {
